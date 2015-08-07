@@ -84,6 +84,53 @@ Type: `string`
 Default: `'@anonymous'`
 
 
+### Download all Files in A Directory (NOT RECURSIVE)
+
+```js
+require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
+
+grunt.initConfig({
+	ftpDownloadAll: {
+		options: {
+			host: 'website.com',
+			user: 'johndoe',
+			pass: '1234'
+		},
+		download: {
+			files: {
+				'public_html/file.txt': 'src/file.txt'
+			}
+		}
+	}
+});
+
+grunt.registerTask('default', ['ftpGet']);
+```
+
+
+## Options
+
+### host
+
+*Required*  
+Type: `string`
+
+### port
+
+Type: `number`  
+Default: `21`
+
+### user
+
+Type: `string`  
+Default: `'anonymous'`
+
+### pass
+
+Type: `string`  
+Default: `'@anonymous'`
+
+
 ## License
 
 MIT © [Sindre Sorhus](http://sindresorhus.com)
