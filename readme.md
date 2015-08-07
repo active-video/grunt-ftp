@@ -96,11 +96,8 @@ grunt.initConfig({
 			user: 'johndoe',
 			pass: '1234'
 		},
-		download: {
-			files: {
-				'public_html/file.txt': 'src/file.txt'
-			}
-		}
+		directory: '',//default is empty string
+		target: '',//default is current directory, use a relative path from your Gruntfile.js
 	}
 });
 
