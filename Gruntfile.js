@@ -31,6 +31,20 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+
+		ftpDownloadAll: {
+			test: {
+				options: {
+					host: 'localhost',
+					//port: 21,
+					user: 'test',
+					pass: 'test'
+				},
+				directory: '',
+				target: 'fixtureDownloadAll'
+			}
+		},
+
 		simplemocha: {
 			test: {
 				src: 'test.js'
